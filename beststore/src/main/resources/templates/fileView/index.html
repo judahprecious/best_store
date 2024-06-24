@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>File Contents</title>
+</head>
+<body>
+    <h1>File Contents</h1>
+    <div th:if="${errorMessage}">
+        <p th:text="${errorMessage}"></p>
+    </div>
+    <div th:if="${fileContents}">
+        <ul>
+            <li th:each="line : ${fileContents}" th:text="${line}"></li>
+        </ul>
+    </div>
+</body>
+</html>
